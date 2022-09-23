@@ -1,0 +1,30 @@
+.formHeading {
+    color: black;
+    margin-left: 65px;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content:inherit;
+    align-items: center;
+    min-height: 100vh;
+}
+.formContainer {
+    padding: 10px;
+    border: 1px solid;
+    background-color: palegoldenrod;
+    min-height: 30vh;
+    margin-top: 100px;
+}
+
+form {
+    padding: inherit;
+}
+
+label {
+    color: black;
+}
+
+.warning {
+    color: red
+}

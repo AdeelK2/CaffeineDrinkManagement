@@ -1,0 +1,19 @@
+<div class="mainContainer">
+
+    <div class="formContainer">
+        <h1 class="formHeading">LOGIN</h1>
+        <form [formGroup]="adminForm" (ngSubmit)="getAdmin(adminForm.value)">
+    
+            <label for="email">Email: </label>
+            <input id="email" type="text" formControlName="email">
+            <br><br>
+            <label for="password">Password: </label>
+            <input id="password" type="password" formControlName="password"><br>
+    
+            <p *ngIf="!adminForm.valid" class="warning">Complete the form to enable button.</p><br>
+            <button (click)="emit(adminLogin)"  type="submit" [disabled]="!adminForm.valid">Submit</button>
+    
+        </form>
+    </div>
+
+</div>

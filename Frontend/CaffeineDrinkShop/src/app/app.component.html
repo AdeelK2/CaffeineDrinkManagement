@@ -1,0 +1,45 @@
+
+<div class="body">
+
+  <header class="header">
+    <h1 class="title_head">
+      {{title}} <br>
+    </h1>
+    <div class="links">
+      <button type="submit" class="btn btn-danger btn-lg btn-block">
+        <a class="homelink" routerLink="/" routerLinkActive="active">Home</a>
+      </button>
+      <button type="submit" class="btn btn-danger btn-lg btn-block">
+        <a class="adminlink" routerLink="admin/login" routerLinkActive="active">Admin</a>
+      </button>
+      
+    </div>
+  </header>
+
+<!--     
+    <table class="drinkTable" border="1">
+      <thead>
+        <tr>
+          <td>Drink Name</td>
+          <td>Company Name</td>
+          <td>Price</td>
+          <td>Drink Image</td>
+          <td>Description</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let drink of allDrinks;">
+          <td >{{drink.drink_name}}</td>
+          <td>{{drink.drink_company_name}}</td>
+          <td >{{drink.price}}</td>
+          <td >{{drink.description}}</td>
+        </tr>
+      </tbody>
+    </table> -->
+  <router-outlet></router-outlet>
+  
+  <footer>
+
+  </footer>
+
+</div>

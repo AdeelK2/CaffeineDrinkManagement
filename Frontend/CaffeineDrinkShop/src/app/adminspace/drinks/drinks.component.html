@@ -1,0 +1,35 @@
+<div class="mainContainer">
+
+    <div class="formContainer">
+        <h1 class="formHeading">Add Drink</h1>
+        <form [formGroup]="drinkForm" (ngSubmit)="saveDrink(drinkForm.value)">
+            
+            <label for="drink_code">Drink Name: </label>
+            <input id="drink_code" type="text" formControlName="drink_code"> <br><br>
+          
+            <label for="drink_company_name">Company Name: </label>
+            <input id="drink_company_name" type="text" formControlName="drink_company_name"> <br><br>
+            
+            <label for="drink_code">Drink Code: </label>
+            <input id="drink_code" type="text" formControlName="drink_code"> <br><br>
+
+            <label for="price">Price: </label>
+            <input id="price" type="text" formControlName="price"> <br><br>
+          
+            <label for="drink_quantity">Quantity: </label>
+            <input id="drink_quantity" type="text" formControlName="drink_quantity"> <br><br>
+        
+            <label for="caffeine_qty">Caffeine Quantity: </label>
+            <input id="caffeine_qty" type="text" formControlName="caffeine_qty"> <br><br>
+          
+            <label for="description">Description: </label>
+            <input id="description" type="text" formControlName="description ">
+
+            <p *ngIf="!drinkForm.valid" class="warning">Complete the form to enable button.</p>
+            <button type="submit" [disabled]="!drinkForm.valid">Submit</button> &nbsp;
+            <button (click)="logout()" type="submit">Logout</button>
+        </form>
+
+    </div>
+
+</div>

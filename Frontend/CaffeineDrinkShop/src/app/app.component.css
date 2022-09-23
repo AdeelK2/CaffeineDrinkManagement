@@ -1,0 +1,47 @@
+.body {
+    height: 650 px;  
+    color: palegoldenrod;
+    background-image: url("../assets/images/backgroundImg.jpg");  
+    background-size: 100% ;  
+    background-size: cover;
+}
+.title_head {
+    text-align: center;
+    border: 1px;
+    margin-top: 50px;
+    font-size: 50px;
+    color:#f63240;
+}
+
+.btn-danger,
+body .btn-danger:hover {
+  background: darkorange;
+  border-color: darkorange;
+  color: #fff;
+}
+
+.homelink {
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.adminlink {
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header {
+    border: 1px solid;
+    height: 17vh;
+}
+
+.drinkTable {
+    text-align: center;
+}
+
+.links {
+    background: #f63240;
+    border-color: #f63240;
+}

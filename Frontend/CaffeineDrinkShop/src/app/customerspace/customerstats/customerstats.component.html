@@ -1,0 +1,49 @@
+ <div class="main">
+
+  <div class="container">
+    <!-- <h1 class="heading">Welcome to Caffeine Drink Shop: </h1>
+      <select (change)="selectedDrink($event)">
+        <option value="">Choose Drink</option>
+        <option *ngFor="let drink of allDrinks" [ngValue]="drink">
+          {{drink.drink_name}}
+        </option>
+      </select> <br><br>
+
+      <div class="col my-4 text-center mx-auto">
+        <button type="button" class="btn btn-success" (click)="takeDrink()">
+          Add New Caffeinated Beverage
+        </button>
+      </div> -->
+    <h1 class="heading">Caffeine Drinks</h1><br>
+    <form [formGroup]="CustomerOrderForm" (ngSubmit)="onSubmit(CustomerOrderForm.value)">
+      <div class="d-grid">
+        
+        <select class="custom-select mb-3" (change)="selectedDrink($event)" formControlName="select_drink">
+          <option value="">Choose Drink</option>
+          <option *ngFor="let drink of allDrinks" [value]="drink.caffeine_qty">
+            {{ drink.drink_name }}
+          </option>
+        </select> <br><br>
+
+        <label for="caffeine_qty_consumed">Caffeine Quantity:</label><br>
+        <input id="caffeine_qty_consumed"type="text" formControlName="caffeine_qty_consumed">
+        <p class="caff_quan_message">Enter the caffeine quantity you have already consumed</p>
+        <!-- error block -->
+        <div class="invalid-feedback" *ngIf="isSubmitted && CustomerOrderForm?.invalid">
+          <sup>*</sup>Please choose a drink & enter the caffeine quantity
+        </div>
+        &nbsp;
+        <button type="submit" (click)="CaffeineQtyAchieved(CustomerOrderForm.value)" [disabled]="!CustomerOrderForm.valid" class="btn btn-danger btn-lg btn-block">
+          Calculate Caffeine
+        </button> &nbsp;
+
+        <!-- <button mat-button (click)="CaffeineQtyAchieved(CustomerOrderForm.value)">Calculate Caffeine</button> -->
+        <button type="submit" [disabled]="!CustomerOrderForm.valid" class="btn btn-danger btn-lg btn-block">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
